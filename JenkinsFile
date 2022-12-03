@@ -1,6 +1,6 @@
 pipeline {
 	
-	agent {label 'devops'}
+	agent any
 	tools {
 		jdk 'oracle-9.0.4'
 		maven 'maven'
