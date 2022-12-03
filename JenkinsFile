@@ -2,7 +2,7 @@ pipeline {
 	
 	agent {label 'devops'}
 	tools {
-		java 'java'
+		java 'jdk'
 		maven 'maven'
 	}
 	stages {
