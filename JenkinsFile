@@ -8,7 +8,7 @@ pipeline {
 	stages {
 		stage('Git Checkout') {
 			steps {
-				git credentialsId: 'github', url: ''
+				git credentialsId: 'github', url: 'https://github.com/harsha698/hello-world-with-jenkins'
 			}
 		}
 		stage('Build') {
