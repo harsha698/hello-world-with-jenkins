@@ -2,7 +2,7 @@ pipeline {
 	
 	agent {label 'devops'}
 	tools {
-		java 'jdk'
+		jdk 'oracle-9.0.4'
 		maven 'maven'
 	}
 	stages {
