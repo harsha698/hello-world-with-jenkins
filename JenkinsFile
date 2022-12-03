@@ -1,0 +1,26 @@
+pipeline {
+	
+	agent {label 'devops'}
+	tools {
+		java 'java'
+		maven 'maven'
+	}
+	stages {
+		stage('Git Checkout') {
+			steps {
+				git credentialsId: 'github', url: ''
+			}
+		}
+		stage('Build') {
+			steps {
+				echo 'Building the application'
+				sh 'mvn clean install'
+			}
+		}
+		stage('Validate') {
+			steps {
+				sh 'mvn exec:java'
+			}
+		}
+	}
+}
